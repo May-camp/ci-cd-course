@@ -105,3 +105,33 @@ test-*.xml
 tests/node_modules
 tests/package*.json
 .pytest_cache
+
+# Terraform Specific Files
+# ==========================================
+# Local .terraform directories containing downloaded providers
+**/.terraform/*
+
+# Ignore development/local override files (like what tflocal creates)
+**/*_override.tf
+**/*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# ==========================================
+# Security & Secret Key Safety (CRITICAL)
+# ==========================================
+# Never commit your private key files or credentials to GitHub!
+*.pem
+*.key
+mock_creds*
+
+# ==========================================
+# Local State Cache Tracking
+# ==========================================
+# While your GitLab CI pipeline uses state files, your local 
+# development state files should not be committed to GitHub.
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
